@@ -1,16 +1,10 @@
-const mongoose = require("mongoose")
+
 //image validation
 
-const isValidFile = (x) => {
-    if (/(\/*\.(?:png|jpeg))/.test(x))
+const isValidImage = (image) => {
+    if (/(\/*\.(?:png|jpeg))/.test(image))
         return true
 }
 
 
-//id validation
-
-const isValidObjectId = function (objectId) {
-    return mongoose.Types.ObjectId.isValid(objectId)
-}
-
-module.exports = {isValidFile, isValidObjectId}
+module.exports = {isValidImage}
